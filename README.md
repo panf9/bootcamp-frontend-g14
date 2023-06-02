@@ -6,3 +6,5 @@ git log
 git log --oneline
 git log --oneline --graph
 git show <hash>
+  
+* git status -s
