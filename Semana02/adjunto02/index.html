@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="main">
+        <img src="" alt="">
+        <h1>Crea una cuenta</h1>
+        <p>Ingresa la siguiente información para registrarse</p>
+        <form class="form">
+            <div class="nombres">
+                <div>
+                    <label for="names">Names</label>  
+                    <input type="text" name="name" id="names" placeholder="Frank">
+                </div>
+                <div class="apellido">
+                    <label for="apellido">Apellidos</label>  
+                    <input type="text" name="Apellido" id="apellido" placeholder="Parra">
+                </div>
+            </div>
+            
+            <label for="eda">Edad</label>
+            <input type="number" name="edad" id="edad" placeholder="Ej. 19">
+            
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" name="fecha" id="fecha" >
+            
+            <label for="genero">Genero</label>
+            <select name="gen">
+                <option value="" selected disabled>Selecciona una opción...</option>
+                <option value="m">Masculino</option>
+                <option value="f">Femenino</option>
+            </select>
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="correo" id="email" placeholder="Email: Ej. user@gmail.com">
+
+            <label for="direccion">Dirección</label>
+            <input type="text" name="dir" id="direccion" placeholder="Dirección">
+            <input type="text" name="dir" id="direccion" placeholder="Dirección linea 2">
+            
+            <label for="tel">Teléfono</label>
+            <input type="tel" name="tel" id="tel" placeholder="Número de teléfono">
+
+            <label for="zip">Código Postal</label>
+            <input type="number" name="zip" id="zip" placeholder="Ej: 4001">
+
+            <label for="ciudad">Ciudad</label>
+            <input type="text" name="ciudad" id="ciudad" placeholder="Ej: Lima">
+
+            <label for="img">Subir firma</label>
+            <input type="file" accept="image/*" />
+
+            <label>
+                <input type="checkbox" name="terminos" >
+                Acepto los términos, condiciones y politicsa
+            </label>
+
+            <input type="submit" value="Registrarse">
+        </form>
+
+        <p>¿Ya tienes una cuenta? <a href="">Acceda desde aquí</a></p>
+        
+    </main>
+</body>
+</html>
