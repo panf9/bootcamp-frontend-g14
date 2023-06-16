@@ -74,7 +74,7 @@ img {
     /* border: 1px solid red; */
     width: min(100% - 3rem, 720px);
 
-    margin: o auto;
+    margin: 0 auto;
     margin-top: 5rem;
 
     display: flex;
