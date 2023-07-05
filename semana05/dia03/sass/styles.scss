@@ -1,0 +1,318 @@
+@import 'global';
+
+.logo {
+    color: $primary-dark-gold;
+    font-size: 2rem;
+    font-family: $font-primary;
+    font-weight: $font-weight-bold;
+}
+
+header {
+    @include caja-flex(space-between, center, nowrap);
+    padding: 29px;
+
+    ul{
+        display: flex;
+        padding: 0;
+        list-style-type: none;
+
+        a{
+            text-decoration: none;
+            color: $primary-dark-white;
+            padding:12.5px;
+            font-family: $font-primary;
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: capitalize;
+
+            &:hover {
+                color: $primary-dark-gold;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    path:hover {
+        fill: $primary-dark-gold;
+    }
+}
+
+
+.hero__grid{
+    margin-top: 182px;
+    display: grid;
+}
+
+.hero__img {
+    width: 315px;
+    border-radius: 50%;
+    margin-top: 17px;
+    margin-bottom: 37px;
+    grid-column: 1/span 1;
+    grid-row: 1;
+    margin-top: 10px;  
+}
+
+.hero {
+    text-align: center;
+
+    &__name {
+        color: $primary-dark-white;
+        text-align: center;
+        font-size: 2rem;
+        font-family: $font-primary;
+        font-weight: $font-weight-bold;
+        line-height: 50.753px;
+        text-transform: capitalize;
+        margin-top: 104px;
+
+        span{
+            color: $primary-dark-gold;
+            text-decoration: underline;
+        }
+    }
+
+    h1 {
+        color: $primary-dark-white;
+        text-align: center;
+        font-size: 3rem;
+        font-family: $font-primary;
+        font-weight: $font-weight-bold;
+        line-height: 90.85px;
+        text-transform: capitalize;
+    }
+
+    &__icons{
+        @include caja-flex(center, center, nowrap);
+        
+        div {
+            width: 112px;
+            height: 112;
+        }
+
+        &-title {
+            color: #FFF;
+            text-align: center;
+            font-size: $font-size;
+            font-family: $font-primary;
+            font-weight: $font-weight-semibold;
+            margin-bottom: 8px;
+        }
+
+        img{
+            width: 100px;
+            border-top: 8px;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #4F4557;
+        }
+    }
+
+    p {
+        color: $primary-dark-white;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: $font-weight-regular;
+        line-height: 50.753px;
+    }
+    
+}
+
+.hero__grid-top{
+    display: grid;
+}
+
+.hero__grid-top__bg {
+    grid-column: 1/spam 1;
+    grid-row: 1;
+}
+
+.hero__grid-top__info{
+    grid-column: 1/spam 1;
+    grid-row: 1;
+    margin-top: 17px;
+}
+
+.hability {
+    @include caja-flex(space-between, center, nowrap);
+    margin-left: 96px;
+    margin-right: 85px;
+    margin-top: 298px;
+
+    h4 {
+        width: 244px;
+        height: 42px;
+        border-radius: 50px;
+        background: #6D5D6E;
+        text-align: center;
+        padding: 5px;
+
+        color: $primary-dark-gold;
+        font-size: 1.5rem;
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: $font-weight-semibold;
+        line-height: 30px;
+    }
+
+    h2 {
+        width: 638px;
+        color: $primary-dark-white;
+        padding-top: 10px;
+        padding-bottom: 39px;
+        font-size: 3rem;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: $font-weight-bold;
+    }
+    
+    p{
+        width: 473px;
+        color: $primary-dark-white;
+        font-size: $font-size;
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: $font-weight-regular;
+        line-height: 30px;
+    }
+
+    &__links {
+        margin-top: 50px;
+
+        a{
+            color: #FFB742;
+        }
+    }
+    
+    &__icons {
+        text-align: center;
+    }
+
+}
+
+.hability__icons-icon {
+    background-color: #393646;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.portafolio {
+    text-align: center;
+    margin-top: 412px;
+    margin-bottom: 97px;
+
+    p {
+        display: inline-flex;
+        align-items: flex-start;
+        padding: 6px 25px;
+        border-radius: 50px;
+        background: rgba(255, 255, 255, 0.08);
+        color: $primary-dark-gold;
+        font-size: 1.5rem;
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: $font-weight-semibold;
+        line-height: 30px;
+        text-transform: uppercase;
+        gap: 10px;
+    }
+
+    h2{
+        color: $primary-dark-white;
+        text-align: center;
+        font-size: 3rem;
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: $font-weight-bold;
+        line-height: normal;
+        margin-bottom: 48px;
+    }
+
+    a {
+        color: $primary-dark-white;
+        text-align: center;
+        font-size: 1rem;
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: $font-weight-semibold;
+        line-height: 30px;
+        padding-right: 77px;
+
+        &:hover{
+            color: $primary-dark-gold;
+            cursor: pointer;
+        }
+    }
+
+    &__imgs {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(3, 390px);
+        grid-template-rows: repeat(2, 495px);
+        gap: 30px;
+        margin-top: 48px;
+    }
+}
+
+
+
+
+
+
+footer {
+    display: grid;
+}
+
+.fnd-1 {
+    grid-column: 1/span 1;
+    grid-row: 1;
+}
+
+.fnd-2 {
+    grid-column: 1/span 1;
+    grid-row: 1;
+    margin-top: 80px;
+}
+.fnd-3 {
+    grid-column: 1/span 1;
+    grid-row: 1;
+    margin-top: 100px;
+}
+
+.fnd-4 {
+    grid-column: 1/span 1;
+    grid-row: 1;
+    margin-top: 180px;
+}
+.fnd-5 {
+    grid-column: 1/span 1;
+    grid-row: 1;
+    margin-top: 264px;
+}
+
+.logo-foot {
+    grid-column: 1/span 1;
+    grid-row: 1;
+    text-align: center;
+    margin-top:200px;
+}
+
+.made {
+    grid-column: 1/span 2;
+    grid-row: 1;
+    text-align: center;
+    margin-top: 285px;
+
+    color: #FFF;
+    font-size: 1rem;
+    font-family: $font-primary;
+    font-weight: $font-weight-semibold;
+}
+
