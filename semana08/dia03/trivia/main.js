@@ -64,8 +64,15 @@ div.addEventListener('click', function (event) {
 
 buttonNext.addEventListener('click', function (event) {
     numPreg++
-    if (numPreg > preguntas.length) {
+    if (numPreg === preguntas.length - 1) {
+        buttonNext.innerText = "¡Ver Resultado!"
+    }
+    if (numPreg === preguntas.length) {
         buttonNext.remove()
+        a.remove()
+        b.remove()
+        c.remove()
+        div.innerHTML = `<span>Tu puntaje final es ${puntaje}</span>`
     }
     a.classList = b.classList = c.classList = ['hover:relative p-0.5 mb-2 mr-2 overflow-hidden  hover:font-medium hover:text-gray-900 rounded-lg group hover:bg-gradient-to-br from-cyan-500 to-blue-500  group-hover:to-blue-500 hover:text-white dark:text-black w-full px-5 py-2.5 rounded-md border-2 border-sky-500 text-left']
 
