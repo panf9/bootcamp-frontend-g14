@@ -7,9 +7,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <main class="w-96 mx-auto mt-10">
+  <main id="mainNew" class="w-96 mx-auto mt-10">
     <h1 class="text-center text-3xl font-bold mb-5">Trivia con Javascript</h1>
-    <seccition class="flex flex-col px-4 py-6 mb-3 border rounded-lg shadow-2xl shadow-cyan-500/50">
+    <section id="section" class="flex flex-col px-4 py-6 mb-3 border rounded-lg shadow-2xl shadow-cyan-500/50">
       <p class="text-lg font-medium text-gray-800 uppercase mb-3">pregunta 1</p>
         <div class="flex flex-col items-start mb-10">
           <button id="a" type="button" class="hover:relative p-0.5 mb-2 mr-2 overflow-hidden  hover:font-medium hover:text-gray-900 rounded-lg group hover:bg-gradient-to-br from-cyan-500 to-blue-500  group-hover:to-blue-500 hover:text-white dark:text-black w-full px-5 py-2.5 rounded-md border-2 border-sky-500 text-left">
@@ -37,8 +37,8 @@
           </button>
         </div>
       
-        <canva id="myChart"></canva>
-    </seccition>
+        <!-- <canva id="myChart" width="22rem" height="22rem"></canva> -->
+    </section>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

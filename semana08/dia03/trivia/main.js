@@ -7,7 +7,8 @@ const a = document.getElementById('a')
 const b = document.getElementById('b') 
 const c = document.getElementById('c')
 const buttonNext = document.getElementById('next')
-const ctx = document.getElementById('myChart');
+const mainNew = document.getElementById('mainNew')
+const section = document.getElementById('section')
 
 let numPreg = 0
 let puntaje = 0;
@@ -25,7 +26,7 @@ const div = document.querySelector('div')
 
 div.addEventListener('click', function (event) {
     // Event Delegation
-    console.log(event.target.id);
+    // console.log(event.target.id);
     if (event.target.id === preguntas[numPreg].rpta) {
         // console.log('respuesta correcta')
         puntaje += 10
@@ -38,11 +39,15 @@ div.addEventListener('click', function (event) {
     } else if (event.target === div) {
         console.log('Click en el div');
     } else {
-        console.log('Respuesta falsa');
+        // console.log('Respuesta falsa');
         event.target.classList = ["text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2 w-full border-2 border-red-500"]
         a.disabled = b.disabled = c.disabled = true
         // buttonNext.disabled = false
         selected = true
+    }
+
+    if (numPreg === (preguntas.length - 1) && selected) {
+        buttonNext.innerText = "¡Ver Resultado!"
     }
 })
 
@@ -59,59 +64,59 @@ buttonNext.addEventListener('click', function (event) {
     }
 
     numPreg++
-    if (numPreg === preguntas.length - 1) {
-        buttonNext.innerText = "¡Ver Resultado!"
-    }
+    
     if (numPreg === preguntas.length) {
-        Swal.fire({
-            title: 'Por favor ingrese su nombre',
-            input: 'text',
-            inputAttributes: {
-                autocapitalize: 'off'
-            }
-        })
+        // Swal.fire({
+        //     title: 'Por favor, ingrese su nombre',
+        //     input: 'text',
+        //     inputAttributes: {
+        //         autocapitalize: 'on'
+        //     }
+        // })
 
-        buttonNext.remove()
-        a.remove()
-        b.remove()
-        c.remove()
+        // buttonNext.remove()
+        // a.remove()
+        // b.remove()
+        // c.remove()
+        // console.log('ocultamos la section')
+        // console.log(section);
+        // section.forEach(e => e.style.visibility = "hidden")
+        // buttonNext.style.visibility = "hidden"
+        // a.style.visibility = "hidden"
+        // b.style.visibility = "hidden"
+        // c.style.visibility = "hidden"
+        // par.style.visibility = "hidden"
+        // section.style.visibility = "hidden"
+        section.remove()
 
-        div.innerHTML = `<span>Tu puntaje final es ${puntaje}</span>`
+        
+        const spanNew = document.createElement('span')
+        spanNew.innerText = `Tu puntaje final es ${puntaje} de ${10 * preguntas.length}`
+        console.log(spanNew)
+        mainNew.appendChild(spanNew)
+
+        const canva = document.createElement('canvas')
+        canva.setAttribute('id', 'myChart')
+        canva.setAttribute('width', '480px')
+        canva.setAttribute('height', '480px')
+        console.log(canva);
+        mainNew.appendChild(canva)
+
+        const ctx = document.getElementById('myChart')
+        console.log(mainNew);
 
         new Chart(ctx, {
-            type: 'bar',
+            type: 'pie',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: ['Inorrectas', 'Correctas'],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    borderWidth: 1
+                    label: 'Puntos ',
+                    data: [10 * preguntas.length - puntaje, puntaje],
+                    backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)'],
+                    borderWidth: 0.8
                 }]
             },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
         });
-        // new Chart(ctx, {
-        //     type: 'pie',
-        //     data: data,
-        //     options: {
-        //         responsive: true,
-        //         plugins: {
-        //         legend: {
-        //             position: 'top',
-        //         },
-        //         title: {
-        //             display: true,
-        //             text: 'Chart.js Pie Chart'
-        //         }
-        //         }
-        //     },
-        // });
     }
     a.classList = b.classList = c.classList = ['hover:relative p-0.5 mb-2 mr-2 overflow-hidden  hover:font-medium hover:text-gray-900 rounded-lg group hover:bg-gradient-to-br from-cyan-500 to-blue-500  group-hover:to-blue-500 hover:text-white dark:text-black w-full px-5 py-2.5 rounded-md border-2 border-sky-500 text-left']
 
