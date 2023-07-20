@@ -66,13 +66,13 @@ buttonNext.addEventListener('click', function (event) {
     numPreg++
     
     if (numPreg === preguntas.length) {
-        // Swal.fire({
-        //     title: 'Por favor, ingrese su nombre',
-        //     input: 'text',
-        //     inputAttributes: {
-        //         autocapitalize: 'on'
-        //     }
-        // })
+        Swal.fire({
+            title: 'Por favor, ingrese su nombre',
+            input: 'text',
+            inputAttributes: {
+                autocapitalize: 'on'
+            }
+        })
 
         // buttonNext.remove()
         // a.remove()
