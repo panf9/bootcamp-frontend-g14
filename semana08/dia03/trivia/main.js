@@ -11,8 +11,9 @@ const mainNew = document.getElementById('mainNew')
 const section = document.getElementById('section')
 
 let numPreg = 0
-let puntaje = 0;
+let puntaje = 0
 let selected = false
+let nombre = ''
 
 // buttonNext.disabled = true
 
@@ -66,13 +67,13 @@ buttonNext.addEventListener('click', function (event) {
     numPreg++
     
     if (numPreg === preguntas.length) {
-        Swal.fire({
-            title: 'Por favor, ingrese su nombre',
-            input: 'text',
-            inputAttributes: {
-                autocapitalize: 'on'
-            }
-        })
+        // Swal.fire({
+        //     title: 'Por favor, ingrese su nombre',
+        //     input: 'text',
+        //     inputAttributes: {
+        //         autocapitalize: 'on'
+        //     }
+        // })
 
         // buttonNext.remove()
         // a.remove()
@@ -91,7 +92,7 @@ buttonNext.addEventListener('click', function (event) {
 
         
         const spanNew = document.createElement('span')
-        spanNew.innerText = `Tu puntaje final es ${puntaje} de ${10 * preguntas.length}`
+        spanNew.innerText = `${nombre}, tu puntaje final es ${puntaje} de ${10 * preguntas.length}`
         console.log(spanNew)
         mainNew.appendChild(spanNew)
 
@@ -128,3 +129,16 @@ buttonNext.addEventListener('click', function (event) {
     
     selected = false
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+    Swal.fire({
+        title: 'Submit your Github username',
+        input: 'text',
+        showCancelButton: true,
+        confirmButtonText: 'Look up',
+        showLoaderOnConfirm: true,
+        preConfirm: async (resp) => {
+            nombre = resp
+        } 
+    })
+} )
