@@ -7,6 +7,7 @@ const searchInput = document.querySelector('.app__search')
 const filterSelect = document.querySelector('.app__filter')
 const scrollTopButton =document.querySelector('.app__scrolltop')
 
+
 let countryData = []
 
 
@@ -22,14 +23,11 @@ searchInput.addEventListener('keyup', (event) => {
         const joinedCapital = country.capital.join() // Une todos los elemenntos de un arreglo en una cadena de texto
         const loweredCapital = joinedCapital.toLowerCase()
         const loweredValue = value.toLowerCase()
-
         // TODO: Adicionalmente necesitamos filtrar por capital
-
         return loweredName.includes(loweredValue) || loweredCapital.includes(loweredValue)
     })
 
-
-    console.log(filteredCountries)
+    renderCountries(filteredCountries)
 })
 
 
@@ -80,3 +78,4 @@ document.addEventListener('scroll', () => {
         scrollTopButton.style.opacity = 0
     }
 })
+
