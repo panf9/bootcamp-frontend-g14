@@ -10,11 +10,14 @@ const buttonNext = document.getElementById('next')
 const mainNew = document.getElementById('mainNew')
 const section = document.getElementById('section')
 const playAgainButton = document.querySelector('#playAgain')
+const divNew = document.querySelector('.divEnd')
 
 let numPreg = 0
 let puntaje = 0
 let selected = false
 let nombre = ''
+
+divNew.style.display = 'none'
 
 // buttonNext.disabled = true
 
@@ -89,7 +92,7 @@ buttonNext.addEventListener('click', function (event) {
         // c.style.visibility = "hidden"
         // par.style.visibility = "hidden"
         // section.style.visibility = "hidden"
-        section.remove()
+        section.style.display = 'none'
 
         
         const spanNew = document.querySelector('#span')
@@ -102,16 +105,14 @@ buttonNext.addEventListener('click', function (event) {
         // console.log(canva);
         // mainNew.appendChild(canva)
 
-        const divNew = document.querySelector('.divEnd')
-
+        divNew.style.display = 'block'
         divNew.setAttribute('width', '480px')
         divNew.setAttribute('height', '480px')
 
-        divNew.innerHTML = '<canvas id="myChart"></canvas>' + 
-                            '<button id="playAgain" class="text-black bg-gray-200 hover:bg-blue-500 hover:text-white rounded-lg text-sm px-5 py-2.5 inline-flex items-center">¡Volver a jugar!</button>'
+        // divNew.innerHTML = '<canvas id="myChart"></canvas>' + 
+        //                     '<button id="playAgain" class="text-black bg-gray-200 hover:bg-blue-500 hover:text-white rounded-lg text-sm px-5 py-2.5 inline-flex items-center">¡Volver a jugar!</button>'
 
         const ctx = document.getElementById('myChart')
-        console.log(mainNew);
 
         new Chart(ctx, {
             type: 'pie',
@@ -136,6 +137,14 @@ buttonNext.addEventListener('click', function (event) {
     
     selected = false
 })
+
+playAgainButton.addEventListener('click', function (event) {
+    section.style.display = 'block'
+    divNew.style.display = 'none'
+    numPreg = 0
+    puntaje = 0
+
+} )
 
 document.addEventListener('DOMContentLoaded', function () {
 
