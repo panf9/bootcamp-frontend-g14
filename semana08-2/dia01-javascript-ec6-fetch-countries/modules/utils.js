@@ -3,11 +3,23 @@ export const renderCountries = function (countries) {
 
     let countryList = ''
 
+    if (countries.length === 0) {
+        countryListElement.classList.add('app__list-no-found')
+        countryListElement.innerHTML = `
+            <div>
+                <img src="./images/icon_sad_square.svg" width="100" height="100" />
+                Sorry, no result fund 
+            </div>
+        `
+    }
+
+    countryListElement.classList.remove('app__list-no-found')
+
     countries.forEach(country => {
         // console.log(country)
         countryList += `
             <div class="country">
-                <img class="country__flag" src="${country.flags.png}" alt="${country.name.common}">
+                <img class="country__flag" src="${country.flags.png}" alt="${country.name.common}" />
                 <div class="country__wrapper">
                     <h2 class="country__title">${country.name.common}</h2>
                     <div class="country__description">

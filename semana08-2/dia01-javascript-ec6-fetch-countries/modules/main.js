@@ -5,6 +5,7 @@ import { renderCountries } from './utils.js'
 
 const searchInput = document.querySelector('.app__search')
 const filterSelect = document.querySelector('.app__filter')
+const scrollTopButton =document.querySelector('.app__scrolltop')
 
 let countryData = []
 
@@ -62,5 +63,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     countryData = data
 
     renderCountries(data)
+
+    scrollTopButton.style.visibility = 'hidden'
+    scrollTopButton.style.opacity = 0
 })
 
+// Evento scroll
+document.addEventListener('scroll', () => {
+    console.log('scrolling...', window.scrollY);
+
+    if ( window.scrollY > 300 ) {
+        scrollTopButton.style.visibility = 'visible'
+        scrollTopButton.style.opacity = 1
+    } else {
+        scrollTopButton.style.visibility = 'hidden'
+        scrollTopButton.style.opacity = 0
+    }
+})
