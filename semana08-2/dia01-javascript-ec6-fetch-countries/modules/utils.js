@@ -31,7 +31,7 @@ export const renderCountries = function (countries) {
                     <div class="country__description">
                         <strong>Capital:</strong> ${country.capital}
                     </div>
-                    <button class="country__moreinfo">More info</button>
+                    <button class="country__moreinfo" data-country-name="${country.name.common}">More info</button>
                 </div>
             </div>
         `
