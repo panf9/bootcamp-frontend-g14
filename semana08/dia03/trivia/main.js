@@ -9,6 +9,7 @@ const c = document.getElementById('c')
 const buttonNext = document.getElementById('next')
 const mainNew = document.getElementById('mainNew')
 const section = document.getElementById('section')
+const playAgainButton = document.querySelector('#playAgain')
 
 let numPreg = 0
 let puntaje = 0
@@ -91,17 +92,23 @@ buttonNext.addEventListener('click', function (event) {
         section.remove()
 
         
-        const spanNew = document.createElement('span')
+        const spanNew = document.querySelector('#span')
         spanNew.innerText = `${nombre}, tu puntaje final es ${puntaje} de ${10 * preguntas.length}`
-        console.log(spanNew)
-        mainNew.appendChild(spanNew)
 
-        const canva = document.createElement('canvas')
-        canva.setAttribute('id', 'myChart')
-        canva.setAttribute('width', '480px')
-        canva.setAttribute('height', '480px')
-        console.log(canva);
-        mainNew.appendChild(canva)
+        // const canva = document.createElement('canvas')
+        // canva.setAttribute('id', 'myChart')
+        // canva.setAttribute('width', '480px')
+        // canva.setAttribute('height', '480px')
+        // console.log(canva);
+        // mainNew.appendChild(canva)
+
+        const divNew = document.querySelector('.divEnd')
+
+        divNew.setAttribute('width', '480px')
+        divNew.setAttribute('height', '480px')
+
+        divNew.innerHTML = '<canvas id="myChart"></canvas>' + 
+                            '<button id="playAgain" class="text-black bg-gray-200 hover:bg-blue-500 hover:text-white rounded-lg text-sm px-5 py-2.5 inline-flex items-center">¡Volver a jugar!</button>'
 
         const ctx = document.getElementById('myChart')
         console.log(mainNew);
@@ -131,14 +138,29 @@ buttonNext.addEventListener('click', function (event) {
 })
 
 document.addEventListener('DOMContentLoaded', function () {
+
     Swal.fire({
-        title: 'Submit your Github username',
+        title: 'Por favor, ingresa tu nombre',
         input: 'text',
-        showCancelButton: true,
-        confirmButtonText: 'Look up',
         showLoaderOnConfirm: true,
-        preConfirm: async (resp) => {
-            nombre = resp
+        confirmButtonText: 'Continuar',
+        // showCancelButton: true,
+        // cancelButtonText: 'Salir',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        allowEnterKey: false,
+        inputValidator: response => {
+            
+            if (!response) {
+                return "¡Por favor, ingresa tu nombre!"    
+            } else {
+                return undefined
+            }
         } 
+    })
+    .then(result => {
+        if (result.value) {
+            nombre = result.value
+        }
     })
 } )
