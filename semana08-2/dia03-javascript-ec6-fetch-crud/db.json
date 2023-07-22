@@ -1,0 +1,19 @@
+{
+    "users": [
+        {
+        "id": 1,
+        "nombre": "Admin",
+        "correo": "admin@email.com",
+        "password": "pass123"
+        },
+        {
+            "id": 2,
+            "nombre": "client",
+            "correo": "client@email.com",
+            "password": "pass12345"
+        }
+    ],
+    "movies": [
+        
+    ]
+}
