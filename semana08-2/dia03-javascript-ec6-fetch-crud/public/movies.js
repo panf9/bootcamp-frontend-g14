@@ -21,7 +21,12 @@ export const renderMovies = (movies) => {
                         <strong>Resume:</strong> ${movie.resume}
                     </div>
                 </td>
-                <td>1</td>
+                <td>
+                    <div>
+                        <button class="movie__edit">  i </button>
+                        <button class="movie__remove">  x </button>
+                    </div>
+                </td>
             </tr>
         `
     })
