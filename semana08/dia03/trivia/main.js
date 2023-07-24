@@ -7,10 +7,11 @@ const a = document.getElementById('a')
 const b = document.getElementById('b') 
 const c = document.getElementById('c')
 const buttonNext = document.getElementById('next')
-const mainNew = document.getElementById('mainNew')
+// const mainNew = document.getElementById('mainNew')
 const section = document.getElementById('section')
 const playAgainButton = document.querySelector('#playAgain')
 const divNew = document.querySelector('.divEnd')
+const spanNew = document.querySelector('#span')
 
 let numPreg = 0
 let puntaje = 0
@@ -71,46 +72,14 @@ buttonNext.addEventListener('click', function (event) {
     numPreg++
     
     if (numPreg === preguntas.length) {
-        // Swal.fire({
-        //     title: 'Por favor, ingrese su nombre',
-        //     input: 'text',
-        //     inputAttributes: {
-        //         autocapitalize: 'on'
-        //     }
-        // })
 
-        // buttonNext.remove()
-        // a.remove()
-        // b.remove()
-        // c.remove()
-        // console.log('ocultamos la section')
-        // console.log(section);
-        // section.forEach(e => e.style.visibility = "hidden")
-        // buttonNext.style.visibility = "hidden"
-        // a.style.visibility = "hidden"
-        // b.style.visibility = "hidden"
-        // c.style.visibility = "hidden"
-        // par.style.visibility = "hidden"
-        // section.style.visibility = "hidden"
         section.style.display = 'none'
 
-        
-        const spanNew = document.querySelector('#span')
         spanNew.innerText = `${nombre}, tu puntaje final es ${puntaje} de ${10 * preguntas.length}`
-
-        // const canva = document.createElement('canvas')
-        // canva.setAttribute('id', 'myChart')
-        // canva.setAttribute('width', '480px')
-        // canva.setAttribute('height', '480px')
-        // console.log(canva);
-        // mainNew.appendChild(canva)
 
         divNew.style.display = 'block'
         divNew.setAttribute('width', '480px')
         divNew.setAttribute('height', '480px')
-
-        // divNew.innerHTML = '<canvas id="myChart"></canvas>' + 
-        //                     '<button id="playAgain" class="text-black bg-gray-200 hover:bg-blue-500 hover:text-white rounded-lg text-sm px-5 py-2.5 inline-flex items-center">¡Volver a jugar!</button>'
 
         const ctx = document.getElementById('myChart')
 
@@ -139,10 +108,12 @@ buttonNext.addEventListener('click', function (event) {
 })
 
 playAgainButton.addEventListener('click', function (event) {
-    section.style.display = 'block'
-    divNew.style.display = 'none'
-    numPreg = 0
-    puntaje = 0
+    // section.style.display = 'block'
+    // divNew.style.display = 'none'
+    // spanNew.style.display = 'none'
+    // numPreg = 0
+    // puntaje = 0
+    location.reload()
 
 } )
 
@@ -153,8 +124,6 @@ document.addEventListener('DOMContentLoaded', function () {
         input: 'text',
         showLoaderOnConfirm: true,
         confirmButtonText: 'Continuar',
-        // showCancelButton: true,
-        // cancelButtonText: 'Salir',
         allowOutsideClick: false,
         allowEscapeKey: false,
         allowEnterKey: false,
