@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import useAuth from "../hooks/useAuth"
 
 const Login = () => {
     const [form, setForm] = useState({
@@ -8,6 +9,8 @@ const Login = () => {
     })
   
     const navigate = useNavigate()
+    const { setAut } = useAuth()
+
     const handleChange = (event) => {
       const value = event.target.value 
       const name = event.target.name
@@ -41,7 +44,15 @@ const Login = () => {
       setForm({email: '',password: ''})
       
       if (data.length === 1){
-        navigate('/login')
+        const cloneData = { ...data[0] }
+        delete cloneData.password // Borramos el password del objeto
+
+
+        // localStorage.setItem('auth', JSON.stringify(cloneData))
+        setAut(cloneData)
+        
+        navigate('/')
+
       }else{
         alert("credenciales incorrectas!")
       }
