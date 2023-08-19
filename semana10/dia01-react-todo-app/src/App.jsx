@@ -39,6 +39,7 @@ function App() {
       }
   ]
 
+  // TODO: Añadir persistencia a este TODO APP para que las tareas esten siempre visible
   const [todos, setTodos] = useState(DEFAULT_TODOS)
 
 

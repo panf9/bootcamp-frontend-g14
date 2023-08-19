@@ -7,6 +7,11 @@ const useAuth = () => {
 
   const isAuth = Boolean(user?.email) // Si estas logueado
 
+  // const setAuth = (user) => {
+  //   setUser(user)
+  //   localStorage.setItem('auth', JSON.stringify(user))
+  // }
+
   const setAuth = (user) => {
     setUser(user)
     localStorage.setItem('auth', JSON.stringify(user))

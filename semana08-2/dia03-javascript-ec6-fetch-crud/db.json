@@ -57,7 +57,148 @@
       "resumen": "Resumen de prueba"
     },
     {
-      "id": 4
+      "id": 4,
+      "name": "Guardians of the Galaxy Vol. 3",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg",
+      "release": "2023-06-15",
+      "genreId": 2,
+      "resumen": "Resumen de prueba"
+    },
+    {
+      "id": 5,
+      "name": "The Flash",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg",
+      "release": "2023-06-15",
+      "genreId": 2,
+      "resumen": "Resumen de prueba"
+    },
+    {
+      "id": 6,
+      "name": "Spider-Man: Across the Spider-Verse ",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+      "release": "2023-06-02",
+      "genreId": 3,
+      "resumen": "Resumen de prueba"
+    },
+    {
+      "id": 8,
+      "name": "Elemental",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+      "release": "2023-06-15",
+      "genreId": 3,
+      "resumen": "In a city where fire, water, land and air residents live together, a fiery young woman and a go-with-the-flow guy will discover something elemental: how much they have in common."
+    },
+    {
+      "id": 9,
+      "name": "The Super Mario Bros. Movie",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+      "release": "2023-04-05",
+      "genreId": 3,
+      "resumen": "Resumen de prueba"
+    },
+    {
+      "name": "Guardians of the Galaxy Vol. 3",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg",
+      "release": "2023-06-15",
+      "genreId": 2,
+      "resume": "Resumen de prueba",
+      "id": 10
+    },
+    {
+      "name": "Barbie",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+      "release": "2023-07-21",
+      "genreId": 1,
+      "resume": "Resumen de prueba",
+      "id": 11
+    },
+    {
+      "name": "Transformers: Rise of the Beasts",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/gPbM0MK8CP8A174rmUwGsADNYKD.jpg",
+      "release": "2023-06-08",
+      "genreId": 2,
+      "resume": "Resumen de prueba",
+      "id": 12
+    },
+    {
+      "name": "Mission: Impossible - Dead Reckoning Part One",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/NNxYkU70HPurnNCSiCjYAmacwm.jpg",
+      "release": "2023-07-13",
+      "genreId": 2,
+      "resume": "Resumen de prueba",
+      "id": 13
+    },
+    {
+      "name": "Transformers",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/gPbM0MK8CP8A174rmUwGsADNYKD.jpg",
+      "release": "2023-06-08",
+      "genreId": 2,
+      "resume": "Resumen de prueba",
+      "id": 14
+    },
+    {
+      "name": "Mission: Impossible - Dead Reckoning Part One",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/NNxYkU70HPurnNCSiCjYAmacwm.jpg",
+      "release": "2023-07-13",
+      "genreId": 2,
+      "resume": "Resumen de prueba 23",
+      "id": 15
+    },
+    {
+      "name": "as",
+      "image": "asassa",
+      "release": "0001-12-12",
+      "genreId": 2,
+      "resume": "werfc",
+      "id": 16
+    },
+    {
+      "name": "Frank Parra",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+      "release": "0001-12-12",
+      "genreId": 1,
+      "resume": "1212",
+      "id": 17
+    },
+    {
+      "name": "Frank Parra",
+      "image": "https://pics.filmaffinity.com/Objetos-575228251-large.jpg",
+      "release": "0023-03-31",
+      "genreId": 2,
+      "resume": "mañana",
+      "id": 18
+    },
+    {
+      "name": "Frank Parra",
+      "image": "https://pics.filmaffinity.com/Objetos-575228251-large.jpg",
+      "release": "2023-08-19",
+      "genreId": 2,
+      "resume": "mañanananana",
+      "id": 19
+    },
+    {
+      "name": "Frank",
+      "image": "qw",
+      "release": "2023-08-12",
+      "genreId": 3,
+      "resume": "mlaakajja",
+      "id": 20
+    },
+    {
+      "name": "Frank",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+      "release": "2023-08-18",
+      "genreId": 3,
+      "resume": "msmsmsmsmmsmsmsms",
+      "id": 21
+    },
+    {
+      "name": "10/2018",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+      "release": "2023-08-12",
+      "genreId": 3,
+      "resume": "sssssssss",
+      "id": 22
     }
   ]
 }

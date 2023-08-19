@@ -32,16 +32,11 @@ const AppointmentsForm = ({ onSaveAppointment, appointment }) => {
   useEffect(() => {
     // console.log("Estoy en el useEffect");
     if (Object.keys(appointment).length > 0) {
+      console.log(appointment);
       setForm(appointment)
     }
   }, [appointment])
 
-  // useEffect(()=>{
-  //   console.log('estoy en buton guardar');
-  //   const newAppointment = appointment.map( appoint => {
-  //     appoint.filter( app => )
-  //   })
-  // }, [])
 
   const handleChange = (event) => {
     // const name = event.target.name
@@ -51,34 +46,36 @@ const AppointmentsForm = ({ onSaveAppointment, appointment }) => {
     const color = COLORS[Math.floor(Math.random()*11)]
 
     setForm({ ...form, [name]:value, color:color })
+
   }
 
-  const handleSaveAppointment = (e, appointment) => {
+  const handleSaveAppointment = (e) => {
     e.preventDefault()
 
-    console.log(e);
-
-    if (id === appointment.id ) {
-      setForm({...form, petName, petAge, ownerName, appointmentDate, appointmentTime, symptoms})
-    } else {
+    // Verificamos si existe un ID para luego modificar los valores del objeto correspondiente a ese ID
+    if( appointment.id) {
+      appointment.petName = form.petName
+      appointment.petAge = form.petAge
+      appointment.ownerName = form.ownerName
+      appointment.appointmentDate = form.appointmentDate
+      appointment.appointmentTime = form.appointmentTime
+      appointment.symptoms = form.symptoms
+      onSaveAppointment(appointment)
+    
+    } else { // En caso no existe el ID agreamos un objeto más y le creamos su ID
+      console.log(appointment.id);
+      console.log("ejecuta el ELSE");
       const newAppointment = {
         ...form,
         id: crypto.randomUUID()
       }
-  
       onSaveAppointment(newAppointment)
     }
 
-    // const newAppointment = {
-    //   ...form,
-    //   id: crypto.randomUUID()
-    // }
-
-    // onSaveAppointment(newAppointment)
     
-    
-
+    appointment = INITIAL_FORM_STATE
     setForm(INITIAL_FORM_STATE)
+    // console.log("App al final", appointment)
   }
 
   return (
@@ -139,13 +136,13 @@ const AppointmentsForm = ({ onSaveAppointment, appointment }) => {
           value={form.symptoms}
           onChange={handleChange}
         />
-        <input 
+        {/* <input 
           className="hidden"
           type="text" 
           name="color"
           value={form.color}
           onChange={handleChange}
-        />
+        /> */}
         <input 
           className="border p-2 bg-green-800 text-white rounded-md"
           type="submit" 

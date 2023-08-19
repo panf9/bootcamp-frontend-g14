@@ -11,7 +11,7 @@ const AppointmentsList = ({ appointments, onRemove, onEdit}) => {
   return (
     <section className="w-1/2 p-4 bg-white rounded-lg">
       <h2 className="text-2xl text-center mb-4">Listado de Pacientes</h2>
-      <ul>
+      <div>
         {appointments.map(appointment => {
           // console.log(appointment);
           return (
@@ -79,7 +79,7 @@ const AppointmentsList = ({ appointments, onRemove, onEdit}) => {
           )
         })}
         {/* {JSON.stringify(appointments)} */}
-      </ul>  
+      </div>  
     </section>
   )
 }
